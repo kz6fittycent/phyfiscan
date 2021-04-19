@@ -1,0 +1,53 @@
+name: pyfiscan
+version: 'git'
+summary: Pyfiscan is free web-application vulnerability and version scanner
+description: |
+  Pyfiscan is free web-application vulnerability and version scanner 
+  and can be used to locate out-dated versions of common web-applications 
+  in Linux-servers. Example use case is hosting-providers keeping eye on 
+  their users installations to keep up with security-updates. 
+  
+  Fingerprints are easy to create and modify as user can write those in 
+  YAML-syntax. Pyfiscan also contains tool to create email alerts using templates.
+  
+  Copyright (c) 2009-2020, Henri Salo - All rights reserved.
+
+license: BSD-3-Clause
+
+base: core20
+grade: stable 
+confinement: strict
+compression: lzo
+
+architectures:
+  - build-on: amd64
+  - build-on: arm64
+  - build-on: armhf
+  - build-on: ppc64el
+  - build-on: s390x
+
+apps:
+  pyfiscan:
+    command: pyfiscan
+    environment:
+      LC_ALL: C.UTF-8
+      PYTHONPATH: $SNAP/usr/lib/python3/site-packages      
+      
+    plugs:
+      - network
+      - network-bind
+      - home
+
+parts: 
+  pyfiscan:
+    source: https://github.com/kz6fittycent/pyfiscan
+    source-type: git
+    plugin: python
+    requirements: 
+      - requirements.txt    
+      
+    build-packages:
+      - python3
+      
+    stage-packages:
+      - python3
