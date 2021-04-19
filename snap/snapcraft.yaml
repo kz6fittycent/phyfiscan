@@ -43,6 +43,7 @@ parts:
     source: https://github.com/kz6fittycent/pyfiscan
     source-type: git
     plugin: python
+    python-version: python3    
     requirements: 
       - requirements.txt    
       
