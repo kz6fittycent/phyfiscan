@@ -45,7 +45,7 @@ parts:
     plugin: python
     python-version: python3    
     requirements: 
-      - requirements.txt    
+      - requirements.lst    
       
     build-packages:
       - python3
