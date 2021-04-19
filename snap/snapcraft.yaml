@@ -31,7 +31,7 @@ apps:
     command: pyfiscan
     environment:
       LC_ALL: C.UTF-8
-      PYTHONPATH: $SNAP/usr/lib/python3.6/site-packages      
+      PYTHONPATH: $SNAP/usr/lib/python3/site-packages      
       
     plugs:
       - network
@@ -44,9 +44,7 @@ parts:
     source-type: git
     plugin: python
     python-version: python3    
-    requirements: 
-      - requirements.lst    
-      
+
     build-packages:
       - python3
       
