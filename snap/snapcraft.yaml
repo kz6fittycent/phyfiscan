@@ -28,7 +28,7 @@ architectures:
 
 apps:
   pyfiscan:
-    command: pyfiscan
+    command: python3 $SNAP/usr/bin/pyfiscan
     environment:
       LC_ALL: C.UTF-8
       PYTHONPATH: $SNAP/usr/lib/python3/site-packages      
