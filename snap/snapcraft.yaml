@@ -47,6 +47,18 @@ parts:
 
     build-packages:
       - python3
+      - virtualenv
+      - pyyaml
+      - jinja2
+      - scandir
+      - chardet
+      - docopt
       
     stage-packages:
       - python3
+      - virtualenv
+      - pyyaml
+      - jinja2
+      - scandir
+      - chardet
+      - docopt
