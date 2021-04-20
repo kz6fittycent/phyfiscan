@@ -31,8 +31,7 @@ apps:
     command: python3 $SNAP/pyfiscan.py
     environment:
       LC_ALL: C.UTF-8
-      PYTHONPATH: $SNAP/usr/lib/python3/dist-packages      
-      
+      PYTHONPATH: $SNAP/usr/lib/python3/dist-packages          
     plugs:
       - network
       - network-bind
