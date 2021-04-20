@@ -40,7 +40,7 @@ apps:
 
 parts: 
   pyfiscan:
-    source: https://github.com/kz6fittycent/pyfiscan
+    source: https://github.com/fgeek/pyfiscan
     source-type: git
     plugin: python
     python-version: python3    
